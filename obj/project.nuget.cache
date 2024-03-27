@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "o84kBc5xeFdBism7bRt4CCL2VwkcwAhvFN4hpYOKt2Y2MnGrHmCwcsUXLOyOj8VRS7SzkOl31GVGNy5UrPCwRA==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\freja.payne\\2022-2023programmering\\fruitgame\\fruitgame.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\freja.payne\\.nuget\\packages\\raylib-cs\\6.0.0\\raylib-cs.6.0.0.nupkg.sha512",
+    "C:\\Users\\freja.payne\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
