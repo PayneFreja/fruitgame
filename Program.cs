@@ -34,6 +34,7 @@ while (!Raylib.WindowShouldClose())
 {
     Raylib.BeginDrawing(); // börjar rita spelet
     Raylib.ClearBackground(Color.White);
+    Console.WriteLine($"{f.move}");
     DrawAll();
     // f.MoveMouse();
     fs.moveFruits();
@@ -41,7 +42,8 @@ while (!Raylib.WindowShouldClose())
     fs.MoveFruitsMouse();
     fs.CheckCollisionFruits(b.rect, fs);
     fs.DoAll(bb, c, a);
-    fs.FruitCol(bb.rect, c.rect);
+    fs.FruitCol(bb.rect, c.rect, f);
+    // fs.StopMoving(bb.rect, c.rect, f);
     // fs.CheckCollisionBBC(bb.rect, c.rect);
     // fs.CheckCollisionNoPair(bb, c, f);
     // f.ShouldAddPoints(g);

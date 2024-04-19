@@ -48,6 +48,11 @@ public class Fruit
         }
     }
 
+    public void StopMovement()
+    {
+        move = false;
+    }
+
     public bool CheckCollision(Rectangle boxRect, FruitSpawner fs)
     {
 
