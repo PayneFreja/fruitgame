@@ -4,7 +4,7 @@ using Raylib_cs;
 Raylib.InitWindow(1200, 800, "Fruit Game");
 
 Raylib.SetTargetFPS(60);
-Fruit f = new();
+// Fruit f = new();
 Game g = new();
 Box b = new();
 BlueBerry bb = new();
@@ -34,7 +34,7 @@ while (!Raylib.WindowShouldClose())
 {
     Raylib.BeginDrawing(); // börjar rita spelet
     Raylib.ClearBackground(Color.White);
-    Console.WriteLine($"{f.move}");
+    // Console.WriteLine($"{f.move}");
     DrawAll();
     // f.MoveMouse();
     fs.moveFruits();
@@ -42,7 +42,7 @@ while (!Raylib.WindowShouldClose())
     fs.MoveFruitsMouse();
     fs.CheckCollisionFruits(b.rect, fs);
     fs.DoAll(bb, c, a);
-    fs.FruitCol(bb.rect, c.rect, f);
+    fs.FruitCol(bb.rect, c.rect, fs);
     // fs.StopMoving(bb.rect, c.rect, f);
     // fs.CheckCollisionBBC(bb.rect, c.rect);
     // fs.CheckCollisionNoPair(bb, c, f);

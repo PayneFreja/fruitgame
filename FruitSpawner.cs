@@ -86,14 +86,15 @@ public class FruitSpawner
     //         // }
     //     }
     // }
-    public bool CheckCollisionBBC(Rectangle rect1, Rectangle rect2, Fruit f)
+    public bool CheckCollisionBBC(Fruit f1, Fruit f2, FruitSpawner fs)
     {
 
-        if (Raylib.CheckCollisionRecs(rect1, rect2))
+        if (Raylib.CheckCollisionRecs(f1.rect, f2.rect))
         {
-
-            Console.WriteLine("funkar");
-            StopMoveFruit();
+            // Console.WriteLine("funkar");
+            // StopMoveFruit();
+            f2.StopMovement();
+            f2.IsCollided(fs);
             return true;
         }
         else
@@ -104,15 +105,16 @@ public class FruitSpawner
 
     }
 
-    public void FruitCol(Rectangle bbRect, Rectangle cRect, Fruit f)
+    public void FruitCol(Rectangle bbRect, Rectangle cRect, FruitSpawner fs)
     {
         foreach (Fruit fruitA in spawnedFruits)
         {
+            // fruitA.StartMovement();
             foreach (Fruit fruitB in spawnedFruits)
             {
                 if (fruitA != fruitB)
                 {
-                    CheckCollisionBBC(fruitA.rect, fruitB.rect, f);
+                    CheckCollisionBBC(fruitA, fruitB, fs);
                 }
             }
         }
