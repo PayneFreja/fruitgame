@@ -17,11 +17,6 @@ FruitSpawner fs = new();
 
 void DrawAll()
 {
-    // bb.Draw();
-    // c.Draw();
-    // a.Draw();
-    // pa.Draw();
-    // wm.Draw();
     b.Draw();
     // Game.DrawInts(g.points);
     Game.DrawSpawned(fs);
@@ -33,7 +28,7 @@ void DrawAll()
 while (!Raylib.WindowShouldClose())
 {
     Raylib.BeginDrawing(); // börjar rita spelet
-    Raylib.ClearBackground(Color.White);
+    Raylib.ClearBackground(Color.LightGray);
     // Console.WriteLine($"{f.move}");
     DrawAll();
     // f.MoveMouse();
